@@ -1,0 +1,20 @@
+
+body {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background: none;
+}
+
+.middle {
+	padding-left: 2em;
+	padding-right: 2em;
+	margin-top: 25%;
+}
+
+.full {
+  background: url(../images/tigersPage.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
