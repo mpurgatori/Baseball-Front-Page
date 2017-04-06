@@ -28,7 +28,7 @@
   let theGame = {}
   for (let i = 0; i < scoreboard.game.length; i++) {
     if (scoreboard.game[i].home_team_name === myTeam || scoreboard.game[i].away_team_name === myTeam) {
-      if (scoreboard.game[i].status !== 'Final' || scoreboard.game[i].status !== 'Postponed') {
+      if (scoreboard.game[i].status !== 'Final' && scoreboard.game[i].status !== 'Postponed') {
         theGame = scoreboard.game[i]
         return theGame
       }
