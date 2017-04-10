@@ -12,7 +12,8 @@ body {
 }
 
 .full {
-  background: url(../images/tigersPage.jpg) no-repeat center center fixed;
+  background: no-repeat center center fixed;
+	background-color: whitesmoke;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

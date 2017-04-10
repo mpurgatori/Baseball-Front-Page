@@ -2,6 +2,8 @@
 
 //Helper function to format date of game in HTML
  const dateOfGame = (gameDate, gameDayOfWeek) => {
+  const months = ['Jan','Feb','Mar','Apr','May','June','July','Aug','Sept','Oct','Nov','Dec']
+  const daysOfWeek = {SUN:'Sunday',MON:'Monday',TUE:'Tuesday',WED:'Wednesday',THU:'Thursday',FRI:'Friday',SAT:'Saturday'}
   let day = Number(gameDate.slice(8,10)).toString()
   let month = months[Number(gameDate.slice(5,7))-1]
   let year = gameDate.slice(0,4)
