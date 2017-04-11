@@ -1,0 +1,12 @@
+{
+  "name": "Baseball Front Page",
+  "version": "1.0",
+  "description": "A landing page for your favorite baseball team's games",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Baseball Front Page"
+  },
+  "chrome_url_overrides": {
+      "newtab": "index.html"
+   }
+}

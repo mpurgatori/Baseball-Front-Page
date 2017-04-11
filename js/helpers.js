@@ -39,6 +39,16 @@
   return false
 }
 
+const isEmpty = o => {
+    for(let i in o){
+        if(o.hasOwnProperty(i)){
+            return false
+        }
+    }
+    return true
+}
+
+
 
 //Function that creates an array of ten api calls, one for every day from 5 days before today, today and 4 days from now
  const callArrayContructor = () => {
