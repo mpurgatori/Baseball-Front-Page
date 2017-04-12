@@ -1,13 +1,13 @@
 
 //
 const setOrLoadTeam = () => {
+  $('#gameInfo').hide()
   let theSelectedTeam = Cookies.get('team') || null
   if (theSelectedTeam) {
-    $('#teamSelector').hide()
     run(theSelectedTeam)
   }
   else {
-    $('#gameInfo').hide()
+    $('#teamSelector').show()
     $('#teamButton').click((e) => {
       e.preventDefault()
       let userTeam = document.getElementById('sel1')
@@ -20,16 +20,17 @@ const setOrLoadTeam = () => {
 }
 
 const changeTeam = () => {
-  $('#changeTeam').click(() => {
+  $('#changeTeam').click((e) => {
+    e.preventDefault()
     Cookies.remove('team')
-    $('#gameInfo').fadeOut(800)
-    $('#teamSelector').fadeTo(0, 800)
+    $('#gameInfo').hide()
     setOrLoadTeam()
   })
 }
 
 
 const run = (team) => {
+  $('#teamSelector').hide()
   Promise.all(requestCreate(callArrayContructor()))
     .then(gameScores => {
       let previousGame = {}
@@ -43,10 +44,10 @@ const run = (team) => {
       else {
         document.getElementById('prev').innerHTML = 'Previous Game'
         document.getElementById('prevDate').innerHTML = dateOfGame(previousGame.time_date, previousGame.day)
-        document.getElementById('prevAwayTeam').innerHTML = `${teamCity[previousGame.away_team_name]} ${previousGame.away_team_name} (${previousGame.away_win}-${previousGame.away_loss})`
+        document.getElementById('prevAwayTeam').innerHTML = `${teamAsset[previousGame.away_team_name].city} ${previousGame.away_team_name} (${previousGame.away_win}-${previousGame.away_loss})`
         document.getElementById('prevAwayScore').innerHTML = previousGame.away_team_runs || null
         document.getElementById('atPrev').innerHTML = '@'
-        document.getElementById('prevHomeTeam').innerHTML = `${teamCity[previousGame.home_team_name]} ${previousGame.home_team_name} (${previousGame.home_win}-${previousGame.home_loss})`
+        document.getElementById('prevHomeTeam').innerHTML = `${teamAsset[previousGame.home_team_name].city} ${previousGame.home_team_name} (${previousGame.home_win}-${previousGame.home_loss})`
         document.getElementById('prevHomeScore').innerHTML = previousGame.home_team_runs || null
         document.getElementById('prevStatus').innerHTML = previousGame.status
       }
@@ -66,16 +67,15 @@ const run = (team) => {
         else { document.getElementById('next').innerHTML = 'Next Game' }
         document.getElementById('nextDate').innerHTML = dateOfGame(nextGame.time_date, nextGame.day)
         document.getElementById('nextTime').innerHTML = `${nextGame.home_time} ${nextGame.home_ampm} ${nextGame.home_time_zone}`
-        document.getElementById('nextAwayTeam').innerHTML = `${teamCity[nextGame.away_team_name]} ${nextGame.away_team_name} (${nextGame.away_win}-${nextGame.away_loss})`
+        document.getElementById('nextAwayTeam').innerHTML = `${teamAsset[nextGame.away_team_name].city} ${nextGame.away_team_name} (${nextGame.away_win}-${nextGame.away_loss})`
         document.getElementById('nextAwayScore').innerHTML = nextGame.away_team_runs || null
         document.getElementById('atNext').innerHTML = '@'
-        document.getElementById('nextHomeTeam').innerHTML = `${teamCity[nextGame.home_team_name]} ${nextGame.home_team_name} (${nextGame.home_win}-${nextGame.home_loss})`
+        document.getElementById('nextHomeTeam').innerHTML = `${teamAsset[nextGame.home_team_name].city} ${nextGame.home_team_name} (${nextGame.home_win}-${nextGame.home_loss})`
         document.getElementById('nextHomeScore').innerHTML = nextGame.home_team_runs || null
         if (nextGame.inning) { document.getElementById('nextStatus').innerHTML = `${nextGame.status}: Inning ${nextGame.inning}` }
         else { document.getElementById('nextStatus').innerHTML = nextGame.status }
       }
-      $('#teamSelector').fadeTo(800, 0)
-      $('#gameInfo').fadeIn(1200)
+      $('#gameInfo').fadeIn(400)
     })
 }
 

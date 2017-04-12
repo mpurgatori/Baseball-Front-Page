@@ -13,9 +13,26 @@ body {
 
 .full {
   background: no-repeat center center fixed;
-	background-color: whitesmoke;
+	background-color: #ea8b25;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+
+.previous {
+    width: 400px;
+    height: 400px;
+    background: #fff7d3;
+		border-radius: 50%;
+		text-align: center;
+}
+
+.next {
+    width: 600px;
+    height: 600px;
+    background: #fff7d3;
+		border-radius: 50%;
+		text-align: center;
 }

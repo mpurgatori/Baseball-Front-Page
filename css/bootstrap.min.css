@@ -7,6 +7,55 @@
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
+
+.btn-team { 
+  color: #FF0000; 
+  background-color: #FFFFFF; 
+  border-color: #FF0000; 
+} 
+ 
+.btn-team:hover, 
+.btn-team:focus, 
+.btn-team:active, 
+.btn-team.active, 
+.open .dropdown-toggle.btn-team { 
+  color: #FF0000; 
+  background-color: #FFDEDE; 
+  border-color: #FF0000; 
+} 
+ 
+.btn-team:active, 
+.btn-team.active, 
+.open .dropdown-toggle.btn-team { 
+  background-image: none; 
+} 
+ 
+.btn-team.disabled, 
+.btn-team[disabled], 
+fieldset[disabled] .btn-team, 
+.btn-team.disabled:hover, 
+.btn-team[disabled]:hover, 
+fieldset[disabled] .btn-team:hover, 
+.btn-team.disabled:focus, 
+.btn-team[disabled]:focus, 
+fieldset[disabled] .btn-team:focus, 
+.btn-team.disabled:active, 
+.btn-team[disabled]:active, 
+fieldset[disabled] .btn-team:active, 
+.btn-team.disabled.active, 
+.btn-team[disabled].active, 
+fieldset[disabled] .btn-team.active { 
+  background-color: #FFFFFF; 
+  border-color: #FF0000; 
+} 
+ 
+.btn-team .badge { 
+  color: #FFFFFF; 
+  background-color: #FF0000; 
+}
+
+
+
 html {
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
