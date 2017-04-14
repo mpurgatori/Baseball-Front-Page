@@ -1,6 +1,7 @@
 
 const setOrLoadTeam = () => {
   $('#gameInfo').hide()
+  $('#changeTeam').hide()
   let theSelectedTeam = Cookies.get('team') || null
   if (theSelectedTeam) {
     run(theSelectedTeam)
@@ -23,6 +24,7 @@ const changeTeam = () => {
     e.preventDefault()
     Cookies.remove('team')
     $('#gameInfo').hide()
+    $('#changeTeam').hide()
     setOrLoadTeam()
   })
 }
@@ -75,6 +77,7 @@ const run = (team) => {
         else { document.getElementById('nextStatus').innerHTML = nextGame.status }
       }
       $('#gameInfo').fadeIn(400)
+      $('#changeTeam').fadeIn(400)
     })
 }
 
