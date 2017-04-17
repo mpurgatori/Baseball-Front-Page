@@ -52,7 +52,7 @@ const run = (team) => {
         document.getElementById('atPrev').innerHTML = '@'
         document.getElementById('prevHomeCity').innerHTML = `${teamAsset[previousGame.home_team_name].city}`
         document.getElementById('prevHomeTeam').innerHTML = `${previousGame.home_team_name}`
-        document.getElementById('prevAwayRecord').innerHTML = `${previousGame.home_win}-${previousGame.home_loss}`
+        document.getElementById('prevHomeRecord').innerHTML = `${previousGame.home_win}-${previousGame.home_loss}`
         document.getElementById('prevHomeScore').innerHTML = previousGame.home_team_runs || null
         document.getElementById('prevStatus').innerHTML = previousGame.status
       }

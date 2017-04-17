@@ -1,5 +1,6 @@
 
 body {
+  font-family: 'Josefin Sans', sans-serif;
 	margin-top: 50px;
 	margin-bottom: 50px;
 	background: none;
@@ -23,11 +24,8 @@ body {
 
 .previous {
     color: white;
-    width: 300px;
-    height: 300px;
     background: #264a84;
-		border-radius: 50%;
-		text-align: center;
+
 }
 
 
@@ -37,12 +35,8 @@ h1 {
 
 .next {
     color:white;
-    width: 550px;
-    height: 550px;
     background: #264a84;
-		border-radius: 50%;
-		text-align: center;
-    margin:170px 3px 0 3px;
+
 }
 
 #logo {
@@ -52,4 +46,8 @@ h1 {
 
 #teamSelector {
   margin: 10% 40%;
+}
+
+#nextStatus #previousStatus {
+  align: center;
 }

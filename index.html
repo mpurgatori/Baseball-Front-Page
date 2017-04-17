@@ -12,6 +12,9 @@
 
     <title>MLB Front Page</title>
 
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -65,46 +68,72 @@
                 <option value="Nationals">Washington Nationals</option>
             </select>
         </div>
-        <div class="row col-lg-12 col-md-12 col-sm-12" id="gameInfo">
-            <div class="col-lg-3 col-md-3 col-sm-12">
-                <div class="col-lg-12 col-md-12 col-sm-12 previous">
-                    <h1 id="prev"></h1>
-                    <h2 id='prevAwayTeam'></h2>
-                    <h2 id='prevAwayRecord'></h2>
-                    <h2 id='prevAwayScore'></h2>
-                    <h2 id='prevDate'></h2>
-                    <h2 id='prevAwayCity'></h2>
-                    <h2 id='atPrev'></h2>
-                    <h2 id='prevHomeTeam'></h2>
-                    <h2 id='prevHomeCity'></h2>
-                    <h2 id='prevHomeRecord'></h2>
-                    <h2 id='prevHomeScore'></h2>
-                    <h2 id='prevStatus'></h2>
+        <!--Whole main content div-->
+        <div id="gameInfo">
+            <div class="row col-lg-12 col-md-12 col-sm-12">
+                 <!--Second column of row one for logo, offset 3 grid spaces-->
+                <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <img src="./images/tigerHeadLogo.png" alt="Tigers Logo" id="logo">
+                    </div>
+                 </div>
+                
+             </div>
+            <div class="row col-lg-12 col-md-12 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12 ">
+                    <div class= "previous">
+                        <h1 id="prev"></h1>
+                        <!--First column of previous game for away team info-->
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <h2 id='prevAwayCity'></h2>
+                            <h2 id='prevAwayTeam'></h2>
+                            <h2 id='prevAwayRecord'></h2>
+                            <h2 id='prevAwayScore'></h2>
+                        </div>
+                        <!--Second column of previous game for game time and date-->
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <h2 id='prevDate'></h2>
+                            <h2 id='atPrev'></h2>
+                        </div>
+                        <!--Third column of previous game for home team info-->
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <h2 id='prevHomeCity'></h2>
+                            <h2 id='prevHomeTeam'></h2>
+                            <h2 id='prevHomeRecord'></h2>
+                            <h2 id='prevHomeScore'></h2>
+                        </div>
+                        <div class= "col-lg-12 col-md-12 col-sm-12" style="text-align:center;">
+                        <h2 id='prevStatus'></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="next">
+                        <h1 id="next"></h1>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <h2 id='nextAwayCity'></h2>
+                            <h2 id='nextAwayTeam'></h2>
+                            <h2 id='nextAwayRecord'></h2>
+                            <h2 id='nextAwayScore'></h2>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <h2 id='nextDate'></h2>
+                            <h2 id='nextTime'></h2>
+                            <h2 id='atNext'></h2>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <h2 id='nextHomeCity'></h2>
+                            <h2 id='nextHomeTeam'></h2>
+                            <h2 id='nextHomeRecord'></h2>
+                            <h2 id='nextHomeScore'></h2>
+                        </div>
+                        <div class= "col-lg-12 col-md-12 col-sm-12" style="text-align:center;">
+                            <h2 id='nextStatus'></h2>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="col-lg-12 col-md-12 col-sm-12 next">
-                    <h1 id="next"></h1>
-                    <h2 id='nextAwayCity'></h2>
-                    <h2 id='nextAwayTeam'></h2>
-                    <h2 id='nextAwayRecord'></h2>
-                    <h2 id='nextAwayScore'></h2>
-                    <h2 id='nextDate'></h2>
-                    <h2 id='nextTime'></h2>
-                    <h2 id='atNext'></h2>
-                    <h2 id='nextHomeTeam'></h2>
-                    <h2 id='nextHomeCity'></h2>
-                    <h2 id='nextHomeScore'></h2>
-                    <h2 id='nextHomeRecord'></h2>
-                    <h2 id='nextStatus'></h2>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <img src="./images/tigerHeadLogo.png" alt="Tigers Logo" id="logo">
-                </div>
-            </div>
-        </div>
+
         <button id="changeTeam" class="btn-team btn" type="button">Select New Team</button>
     </div>
 </body>
