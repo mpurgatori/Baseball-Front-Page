@@ -41,8 +41,11 @@ const run = (team) => {
           break
         }
       }
+      console.log(previousGame)
       if (isEmpty(previousGame)) { document.getElementById('prev').innerHTML = 'No Previous Game' }
       else {
+        $("#prevAwayLogo").attr("src",teamAsset[previousGame.away_team_name].logo2);
+        $("#prevHomeLogo").attr("src",teamAsset[previousGame.home_team_name].logo2);
         document.getElementById('prev').innerHTML = 'Last Game'
         document.getElementById('prevDate').innerHTML = dateOfGame(previousGame.time_date, previousGame.day)
         document.getElementById('prevAwayCity').innerHTML = `${teamAsset[previousGame.away_team_name].city}`
@@ -70,6 +73,8 @@ const run = (team) => {
       else {
         if (nextGame.status !== 'Preview') { document.getElementById('next').innerHTML = 'Current Game' }
         else { document.getElementById('next').innerHTML = 'Next Game' }
+        $("#nextAwayLogo").attr("src",teamAsset[nextGame.away_team_name].logo2);
+        $("#nextHomeLogo").attr("src",teamAsset[nextGame.home_team_name].logo2);
         document.getElementById('nextDate').innerHTML = dateOfGame(nextGame.time_date, nextGame.day)
         document.getElementById('nextTime').innerHTML = `${nextGame.home_time} ${nextGame.home_ampm} ${nextGame.home_time_zone}`
         document.getElementById('nextAwayCity').innerHTML = `${teamAsset[nextGame.away_team_name].city}`
@@ -84,6 +89,7 @@ const run = (team) => {
         if (nextGame.inning) { document.getElementById('nextStatus').innerHTML = `${nextGame.status}: Inning ${nextGame.inning}` }
         else { document.getElementById('nextStatus').innerHTML = nextGame.status }
       }
+      $("#logo").attr("src",teamAsset[team].logo1);
       $('#gameInfo').fadeIn(400)
       $('#changeTeam').fadeIn(400)
     })

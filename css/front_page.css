@@ -21,22 +21,31 @@ body {
   background-size: cover;
 }
 
+p {
+  font-size: 1.5em;
+   line-height: 70%;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.gameCards {
+  margin-top: 30px;
+}
 
 .previous {
     color: white;
     background: #264a84;
-
-}
-
-
-h1 {
-  font-size: 30px;
-}
+    margin-right: 5px;
+    height: 250px;
+} 
 
 .next {
     color:white;
     background: #264a84;
-
+    margin-left: 5px;
+    height: 250px;
 }
 
 #logo {
@@ -50,4 +59,18 @@ h1 {
 
 #nextStatus #previousStatus {
   align: center;
+}
+
+.logoSmall {
+  height:40px;
+
+  margin-bottom: 10px;
+}
+
+.dateInfo {
+  text-align: center;
+}
+
+.teamInfo {
+  text-align: center;
 }
