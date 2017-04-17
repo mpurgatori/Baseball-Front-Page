@@ -51,12 +51,11 @@ const run = (team) => {
         document.getElementById('prevAwayCity').innerHTML = `${teamAsset[previousGame.away_team_name].city}`
         document.getElementById('prevAwayTeam').innerHTML = `${previousGame.away_team_name}`
         document.getElementById('prevAwayRecord').innerHTML = `${previousGame.away_win}-${previousGame.away_loss}`
-        document.getElementById('prevAwayScore').innerHTML = previousGame.away_team_runs || null
         document.getElementById('atPrev').innerHTML = '@'
+        document.getElementById('prevScore').innerHTML = `${previousGame.away_team_runs || null} - ${previousGame.home_team_runs || null}`
         document.getElementById('prevHomeCity').innerHTML = `${teamAsset[previousGame.home_team_name].city}`
         document.getElementById('prevHomeTeam').innerHTML = `${previousGame.home_team_name}`
         document.getElementById('prevHomeRecord').innerHTML = `${previousGame.home_win}-${previousGame.home_loss}`
-        document.getElementById('prevHomeScore').innerHTML = previousGame.home_team_runs || null
         document.getElementById('prevStatus').innerHTML = previousGame.status
       }
       return gameScores
@@ -80,12 +79,11 @@ const run = (team) => {
         document.getElementById('nextAwayCity').innerHTML = `${teamAsset[nextGame.away_team_name].city}`
         document.getElementById('nextAwayTeam').innerHTML = `${nextGame.away_team_name}`
         document.getElementById('nextAwayRecord').innerHTML = `${nextGame.away_win}-${nextGame.away_loss}`
-        document.getElementById('nextAwayScore').innerHTML = nextGame.away_team_runs || null
         document.getElementById('atNext').innerHTML = '@'
+        if (nextGame.away_team_runs){document.getElementById('nextScore').innerHTML = `${nextGame.away_team_runs} - ${nextGame.home_team_runs}`}
         document.getElementById('nextHomeCity').innerHTML = `${teamAsset[nextGame.home_team_name].city}`
         document.getElementById('nextHomeTeam').innerHTML = `${nextGame.home_team_name}`
         document.getElementById('nextHomeRecord').innerHTML = `${nextGame.home_win}-${nextGame.home_loss}`
-        document.getElementById('nextHomeScore').innerHTML = nextGame.home_team_runs || null
         if (nextGame.inning) { document.getElementById('nextStatus').innerHTML = `${nextGame.status}: Inning ${nextGame.inning}` }
         else { document.getElementById('nextStatus').innerHTML = nextGame.status }
       }
