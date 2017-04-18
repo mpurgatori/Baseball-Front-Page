@@ -39,6 +39,7 @@ h2 {
     background: #264a84;
     margin-right: 5px;
     height: 250px;
+    border-radius: 1%;
 } 
 
 .next {
@@ -46,6 +47,7 @@ h2 {
     background: #264a84;
     margin-left: 5px;
     height: 250px;
+    border-radius: 1%;
 }
 
 #logo {
