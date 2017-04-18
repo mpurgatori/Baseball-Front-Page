@@ -1,7 +1,7 @@
 const teamAsset = {
   'D-backs': {city:'Arizona', logo1:'./images/dbacks1.png', logo2:'./images/dbacks2.png', primary:'#424242',secondary:'#a8162b'},
   Braves: {city:'Atlanta', logo1:'./images/braves1.png', logo2:'./images/braves2.png', primary:'#082854',secondary:'#ba0e2d'},
-  Orioles: {city:'Baltimore', logo1:'./images/orioles1.png', logo2:'./images/orioles2.png', primary:'#',secondary:'#'},
+  Orioles: {city:'Baltimore', logo1:'./images/orioles1.png', logo2:'./images/orioles2.png', primary:'#1c1e1c',secondary:'#fc4c02'},
   'Red Sox': {city:'Boston', logo1:'./images/redSox1.png', logo2:'./images/redSox2.png', primary:'#082144',secondary:'#cb0729'},
   Cubs: {city:'Chicago', logo1:'./images/cubs1.png', logo2:'./images/cubs2.png', primary:'#cc092f',secondary:'#003479'},
   'White Sox': {city:'Chicago', logo1:'./images/whiteSox1.png', logo2:'./images/whiteSox2.png', primary:'#ffffff',secondary:'#040204'},
