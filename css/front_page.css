@@ -14,7 +14,7 @@ body {
 
 .full {
   background: no-repeat center center fixed;
-	background-color: #ea8b25;
+	background-color: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -34,17 +34,9 @@ h2 {
   margin-top: 30px;
 }
 
-.previous {
-    color: white;
-    background: #264a84;
-    margin-right: 5px;
-    height: 250px;
-    border-radius: 1%;
-} 
-
-.next {
+.card {
     color:white;
-    background: #264a84;
+    background: black;
     margin-left: 5px;
     height: 250px;
     border-radius: 1%;
