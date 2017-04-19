@@ -54,6 +54,7 @@ const run = (team) => {
         $("#prevLink").attr("href", `http://www.mlb.com${previousGame.wrapup_link}`)
         document.getElementById('prev').innerHTML = 'Last Game'
         document.getElementById('prevDate').innerHTML = dateOfGame(previousGame.time_date, previousGame.day)
+        document.getElementById('prevTime').innerHTML = `${previousGame.home_time} ${previousGame.home_ampm} ${previousGame.home_time_zone}`
         document.getElementById('prevAwayCity').innerHTML = `${teamAsset[previousGame.away_team_name].city}`
         document.getElementById('prevAwayTeam').innerHTML = `${previousGame.away_team_name}`
         document.getElementById('prevAwayRecord').innerHTML = `(${previousGame.away_win}-${previousGame.away_loss})`

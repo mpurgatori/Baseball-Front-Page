@@ -22,8 +22,8 @@ body {
 }
 
 p {
-  font-size: 1.5em;
-   line-height: 70%;
+  font-size: 1.4em;
+   line-height: 90%;
 }
 
 h2 {
@@ -42,13 +42,17 @@ h2 {
     border-radius: 1%;
 }
 
+.card:hover {
+  opacity: .8;
+}
+
 #logo {
    width: 100%;
    margin: 0 5px;
 }
 
 #teamSelector {
-  margin: 10% 40%;
+  margin: 10% 30%;
 }
 
 #nextStatus #previousStatus {
@@ -67,4 +71,16 @@ h2 {
 
 .teamInfo {
   text-align: center;
+}
+
+#arrow {
+  color:white;
+  font-size:2em; 
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+#arrow:hover{
+  color:black;
+   -webkit-text-stroke-color:white;
 }
