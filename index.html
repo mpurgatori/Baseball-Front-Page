@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>MLB Front Page</title>
+    <title>Baseball Front Page</title>
 
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
@@ -33,8 +33,8 @@
     <!-- Page Content -->
     <div class="container">
         <div class="form-group" id="teamSelector">
-            <label for="sel1">Select your team</label>
-            <button id="teamButton" type="button">Play Ball!</button>
+            <h1>Baseball Front Page</h1>
+            <label for="sel1">Select your team</label> 
             <select class="form-control" id="sel1">
                 <option value="D-backs">Arizona Diamondbacks</option>
                 <option value="Braves">Atlanta Braves</option>
@@ -67,77 +67,82 @@
                 <option value="Blue Jays">Toronto Blue Jays</option>
                 <option value="Nationals">Washington Nationals</option>
             </select>
+            <button id="teamButton" type="button" style="margin-top:10px">Play Ball!</button>
         </div>
         <!--Whole main content div-->
         <div id="gameInfo">
             <div class="row col-lg-12 col-md-12 col-sm-12">
-                 <!--Second column of row one for logo, offset 3 grid spaces-->
-                <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4 col-sm-12">
+                <!--Second column of row one for logo, offset 3 grid spaces-->
+                <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-lg-4 col-md-4 col-sm-4">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <img src="" alt="Team Logo" id="logo">
                     </div>
-                 </div>
-                
-             </div>
-            <div class="row col-lg-12 col-md-12 col-sm-12 gameCards">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="col-lg-12 col-md-12 col-sm-12 card">
-                        <h2 id="prev"></h2>
-                        <!--First column of previous game for away team info-->
-                        <div class="col-lg-4 col-md-4 col-sm-4 teamInfo">
-                            <img src="" alt="Previous Away Logo" id="prevAwayLogo" class="logoSmall">
-                            <p id='prevAwayCity'></p>
-                            <p id='prevAwayTeam'></p>
-                            <p id='prevAwayRecord'></p>
-                        </div>
-                        <!--Second column of previous game for game time and date-->
-                        <div class="col-lg-4 col-md-4 col-sm-4 dateInfo">
-                            <p id='prevDate'style="font-size:1.1em"></p>
-                            <p id='atPrev'></p>
-                            <p id='prevScore'></p>
-                        </div>
-                        <!--Third column of previous game for home team info-->
-                        <div class="col-lg-4 col-md-4 col-sm-4 teamInfo">
-                            <img src="" alt="Previous Home Logo" id="prevHomeLogo" class="logoSmall">
-                            <p id='prevHomeCity'></p>
-                            <p id='prevHomeTeam'></p>
-                            <p id='prevHomeRecord'></p>
-                        </div>
-                        <div class= "col-lg-12 col-md-12 col-sm-12" style="text-align:center;">
-                        <p id='prevStatus'></p>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="col-lg-12 col-md-12 col-sm-12 card">
-                        <h2 id="next"></h2>
-                        <div class="col-lg-4 col-md-4 col-sm-4 teamInfo">
-                            <img src="" alt="Next Away Logo" id="nextAwayLogo" class="logoSmall">
-                            <p id='nextAwayCity'></p>
-                            <p id='nextAwayTeam'></p>
-                            <p id='nextAwayRecord'></p>
+
+            </div>
+            <div class="row col-lg-12 col-md-12 col-sm-12 gameCards">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <a id="prevLink" target="blank" href="">
+                        <div class="col-lg-12 col-md-12 col-sm-12 card">
+                            <h2 id="prev"></h2>
+                            <!--First column of previous game for away team info-->
+                            <div class="col-lg-3 col-md-3 col-sm-3 teamInfo">
+                                <img src="" alt="Previous Away Logo" id="prevAwayLogo" class="logoSmall">
+                                <p id='prevAwayCity'></p>
+                                <p id='prevAwayTeam'></p>
+                                <p id='prevAwayRecord'></p>
+                            </div>
+                            <!--Second column of previous game for game time and date-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 dateInfo">
+                                <p id='prevDate' style="font-size:1.1em"></p>
+                                <p id='atPrev' style="margin-top:40px; font-size:2em"></p>
+                                <p id='prevScore'style="margin-top:50px; font-size:2em; letter-spacing:8px"></p>
+                            </div>
+                            <!--Third column of previous game for home team info-->
+                            <div class="col-lg-3 col-md-3 col-sm-3 teamInfo">
+                                <img src="" alt="Previous Home Logo" id="prevHomeLogo" class="logoSmall">
+                                <p id='prevHomeCity'></p>
+                                <p id='prevHomeTeam'></p>
+                                <p id='prevHomeRecord'></p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12" style="text-align:center;">
+                                <p id='prevStatus'></p>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 dateInfo">
-                            <p id='nextDate'style="font-size:1.1em"></p>
-                            <p id='nextTime'></p>
-                            <p id='atNext'></p>
-                            <p id='nextScore'></p>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <a id="nextLink" target="blank" href="">
+                        <div class="col-lg-12 col-md-12 col-sm-12 card">
+                            <h2 id="next"></h2>
+                            <div class="col-lg-3 col-md-3 col-sm-3 teamInfo">
+                                <img src="" alt="Next Away Logo" id="nextAwayLogo" class="logoSmall">
+                                <p id='nextAwayCity'></p>
+                                <p id='nextAwayTeam'></p>
+                                <p id='nextAwayRecord'></p>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 dateInfo">
+                                <p id='nextDate' style="font-size:1.1em"></p>
+                                <p id='nextTime'></p>
+                                <p id='atNext'style="margin-top:25px; font-size:2em"></p>
+                                <p id='nextScore'style="margin-top:20px; font-size:2em; letter-spacing:5px"></p>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 teamInfo">
+                                <img src="" alt="Next Home Logo" id="nextHomeLogo" class="logoSmall">
+                                <p id='nextHomeCity'></p>
+                                <p id='nextHomeTeam'></p>
+                                <p id='nextHomeRecord'></p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12" style="text-align:center;">
+                                <p id='nextStatus'></p>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 teamInfo">
-                            <img src="" alt="Next Home Logo" id="nextHomeLogo" class="logoSmall">
-                            <p id='nextHomeCity'></p>
-                            <p id='nextHomeTeam'></p>
-                            <p id='nextHomeRecord'></p>
-                        </div>
-                        <div class= "col-lg-12 col-md-12 col-sm-12" style="text-align:center;">
-                            <p id='nextStatus'></p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
-        <button id="changeTeam" class="btn-team btn" type="button">Select New Team</button>
-    </div>
+            <button id="changeTeam" class="btn-team btn" type="button">Select New Team</button>
+        </div>
 </body>
 
 </html>
