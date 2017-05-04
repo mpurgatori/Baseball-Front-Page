@@ -1,6 +1,6 @@
 {
   "name": "Baseball Front Page",
-  "version": "1.0",
+  "version": "1.1",
   "description": "An informational landing page for your favorite baseball team.",
   "manifest_version": 2,
   "icons": {
