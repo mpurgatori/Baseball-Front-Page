@@ -59,7 +59,7 @@ const run = (team) => {
         document.getElementById('prevAwayTeam').innerHTML = `${previousGame.away_team_name}`
         document.getElementById('prevAwayRecord').innerHTML = `(${previousGame.away_win}-${previousGame.away_loss})`
         document.getElementById('atPrev').innerHTML = '@'
-        if(typeof previousGame.away_team_runs === Number){
+        if (previousGame.away_team_runs){
         document.getElementById('prevScore').innerHTML = `${previousGame.away_team_runs} - ${previousGame.home_team_runs}`
         }
         document.getElementById('prevHomeCity').innerHTML = `${teamAsset[previousGame.home_team_name].city}`
